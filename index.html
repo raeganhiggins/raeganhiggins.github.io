@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Raegan Higgins, Ph.D. | Mathematics &amp; Statistics</title>
+
+    <meta name="description"
+          content="Professional website for Dr. Raegan Higgins, Department Chair and Professor in the Department of Mathematics and Statistics at Texas Tech University.">
+
+    <style>
+        /* =========================================================
+           BASE
+           ========================================================= */
+
+        :root {
+            --ttu-red: #cc0000;
+            --ttu-red-dark: #a30000;
+            --black: #111111;
+            --text: #252525;
+            --muted: #5b5b5b;
+            --border: #d8d8d8;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --focus: #000000;
+            --max-width: 1180px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--white);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--ttu-red-dark);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--black);
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 4px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        h2 {
+            margin: 0 0 1.25rem;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        ul {
+            margin-top: 0;
+        }
+
+
+        /* =========================================================
+           ACCESSIBILITY
+           ========================================================= */
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 9999;
+            padding: 0.75rem 1rem;
+            background: var(--black);
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+
+        /* =========================================================
+           TOP BRAND BAR
+           ========================================================= */
+
+        .site-bar {
+            background: var(--black);
+            color: var(--white);
+            border-bottom: 5px solid var(--ttu-red);
+        }
+
+        .site-bar-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            min-height: 64px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .ttu-brand,
+        .department-link {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .ttu-brand {
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .department-link {
+            font-size: 0.95rem;
+        }
+
+        .ttu-brand:hover,
+        .department-link:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #ffffff 62%,
+                    #f3f3f3 62%,
+                    #f3f3f3 100%
+                );
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 6rem) 0;
+
+            display: grid;
+            grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+            gap: clamp(2.5rem, 6vw, 5rem);
+            align-items: center;
+        }
+
+        .hero-kicker {
+            margin-bottom: 0.8rem;
+            color: var(--ttu-red);
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .hero-title-line {
+            width: 90px;
+            height: 6px;
+            margin: 1.5rem 0;
+            background: var(--ttu-red);
+        }
+
+        .hero-role {
+            max-width: 760px;
+            margin-bottom: 1.75rem;
+            color: var(--text);
+            font-size: clamp(1.15rem, 2vw, 1.45rem);
+            font-weight: 600;
+            line-height: 1.45;
+        }
+
+        .hero-summary {
+            max-width: 720px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .portrait {
+            position: relative;
+            max-width: 340px;
+            margin-left: auto;
+        }
+
+        .portrait::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            bottom: -20px;
+            left: 20px;
+            z-index: 0;
+            background: var(--ttu-red);
+        }
+
+        .portrait img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            border: 6px solid var(--black);
+            object-fit: cover;
+        }
+
+
+        /* =========================================================
+           MAIN NAVIGATION
+           ========================================================= */
+
+        .section-nav {
+            background: var(--black);
+        }
+
+        .section-nav-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-nav a {
+            display: block;
+            padding: 1rem 1.3rem;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .section-nav a:hover,
+        .section-nav a:focus {
+            background: var(--ttu-red);
+            color: var(--white);
+        }
+
+
+        /* =========================================================
+           MAIN CONTENT
+           ========================================================= */
+
+        main {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: clamp(3rem, 6vw, 5rem) 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 8px minmax(0, 1fr);
+            gap: 1rem;
+            align-items: stretch;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-heading::before {
+            content: "";
+            display: block;
+            background: var(--ttu-red);
+        }
+
+        .section-heading h2 {
+            margin: 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+            gap: clamp(2rem, 5vw, 4rem);
+            align-items: start;
+        }
+
+
+        /* =========================================================
+           CONTACT
+           ========================================================= */
+
+        .info-card {
+            padding: 2rem;
+            background: var(--light-gray);
+            border-top: 6px solid var(--ttu-red);
+        }
+
+        .info-card h2 {
+            margin-top: 0;
+        }
+
+        .contact-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 1rem;
+        }
+
+        .contact-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-label {
+            display: block;
+            color: var(--black);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           RESEARCH
+           ========================================================= */
+
+        .research-box {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .research-box h3 {
+            color: var(--white);
+        }
+
+        .research-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================================
+           EDUCATION
+           ========================================================= */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            padding: 1.75rem;
+            border: 1px solid var(--border);
+            border-top: 5px solid var(--black);
+            background: var(--white);
+        }
+
+        .education-card h3 {
+            margin-bottom: 0.25rem;
+        }
+
+        .education-location {
+            margin-bottom: 1.25rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .education-card ul {
+            margin-bottom: 0;
+            padding-left: 1.3rem;
+        }
+
+
+        /* =========================================================
+           PROFESSIONAL WORK
+           ========================================================= */
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+        }
+
+        .feature-link {
+            position: relative;
+            display: block;
+            min-height: 170px;
+            padding: 1.75rem;
+            background: var(--light-gray);
+            border: 1px solid var(--border);
+            color: var(--black);
+            text-decoration: none;
+        }
+
+        .feature-link::after {
+            content: "→";
+            position: absolute;
+            right: 1.5rem;
+            bottom: 1.2rem;
+            color: var(--ttu-red);
+            font-size: 2rem;
+        }
+
+        .feature-link:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .feature-link:hover h3,
+        .feature-link:hover p {
+            color: var(--white);
+        }
+
+        .feature-link h3 {
+            font-size: 1.3rem;
+        }
+
+        .feature-link p {
+            margin: 0;
+            padding-right: 2rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+            padding: 2.5rem 0;
+        }
+
+        .footer-name {
+            margin-bottom: 0.35rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .footer-inner p {
+            margin-bottom: 0.3rem;
+            color: #dddddd;
+            font-size: 0.9rem;
+        }
+
+        .footer-inner a {
+            color: var(--white);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .hero {
+                background: var(--white);
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .portrait {
+                width: min(300px, calc(100% - 20px));
+                margin: 0;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .site-bar-inner {
+                padding: 0.9rem 0;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .hero-inner {
+                padding-top: 3rem;
+            }
+
+            .section-nav-inner {
+                display: block;
+            }
+
+            .section-nav a {
+                border-bottom: 1px solid #333333;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 3rem 0;
+            }
+
+            .info-card,
+            .research-box,
+            .education-card {
+                padding: 1.4rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+    <div class="site-bar">
+
+        <div class="site-bar-inner">
+
+            <a class="ttu-brand"
+               href="https://www.ttu.edu/">
+                TEXAS TECH UNIVERSITY
+            </a>
+
+            <a class="department-link"
+               href="https://www.depts.ttu.edu/math/">
+                Department of Mathematics &amp; Statistics
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero" aria-labelledby="page-title">
+
+        <div class="hero-inner">
+
+            <div>
+
+                <div class="hero-kicker">
+                    Mathematics &amp; Statistics
+                </div>
+
+                <h1 id="page-title">
+                    Raegan Higgins, Ph.D.
+                </h1>
+
+                <div class="hero-title-line" aria-hidden="true"></div>
+
+                <p class="hero-role">
+                    Department Chair and Professor
+                </p>
+
+                <p class="hero-summary">
+                    Professor of Mathematics at Texas Tech University with
+                    research interests in time scales, dynamic equations,
+                    mathematical biology and mathematics education.
+                </p>
+
+            </div>
+
+
+            <div class="portrait">
+
+                <img
+                    src="images/raegan-higgins.jpg"
+                    alt="Dr. Raegan Higgins">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SITE NAVIGATION
+         ===================================================== -->
+
+    <nav class="section-nav"
+         aria-label="Raegan Higgins website">
+
+        <div class="section-nav-inner">
+
+            <a href="index.html"
+               aria-current="page">
+                Home
+            </a>
+
+            <a href="teaching.html">
+                Teaching
+            </a>
+
+            <a href="outreach.html">
+                Outreach &amp; Engagement
+            </a>
+
+            <a href="research.html">
+                Research &amp; Grants
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN CONTENT
+     ========================================================= -->
+
+<main id="main-content">
+
+
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
+
+    <section class="content-section" id="about">
+
+        <div class="intro-grid">
+
+            <div>
+
+                <div class="section-heading">
+                    <h2>About Dr. Higgins</h2>
+                </div>
+
+                <p>
+                    Raegan Higgins, Ph.D., is Professor and Chair of the Department of
+                    Mathematics and Statistics at Texas Tech University, where she has
+                    been a member of the faculty since 2008. She previously served as
+                    Associate Vice Provost for Faculty Recruitment and Hiring in the
+                    Office of Faculty Success, leading the university's faculty recruitment
+                    process and supporting transparent, comprehensive, and accessible
+                    policies and procedures for recruiting and retaining excellent faculty
+                    members. She joined the Office of the Provost in 2021 as a faculty
+                    fellow, focusing on identifying and addressing barriers to faculty
+                    advancement, before stepping down to take on the department chair
+                    position in 2026.
+                </p>
+
+                <p>
+                    Higgins' research focuses on the calculus of time scales, a framework
+                    developed to unify and extend results for differential and difference
+                    equations. Her work focuses on oscillation criteria for certain linear
+                    and nonlinear second-order dynamic equations, with additional interests
+                    in applications of time scales to mathematical biology and in issues
+                    affecting pre-service teachers' ability to teach mathematics.
+                </p>
+
+                <p>
+                    As a woman of color in STEM, Higgins is deeply committed to educating,
+                    training, and mentoring women in mathematics. She is a longtime leader
+                    in the Enhancing Diversity in Graduate Education (EDGE) Program, which
+                    supports women's success and leadership development in graduate
+                    mathematics. She also served as lead Principal Investigator for the
+                    Louis Stokes Alliance for Minority Participation (LS-AMP) Bridges
+                    Across Texas grant, helping strengthen undergraduate students' ability
+                    to successfully complete degree programs in the mathematical sciences.
+                </p>
+
+                <p>
+                    Higgins currently serves as President of the Association for Women in
+                    Mathematics (AWM). She is an AWM Fellow and a recipient of the AWM
+                    Gweneth Humphreys Award for Mentoring and the Texas Section of the
+                    Mathematical Association of America's Ron Barnes Distinguished Service
+                    to Students Award.
+                </p>
+
+                <p>
+                    Higgins earned a bachelor's degree in mathematics,
+                    <em>summa cum laude</em>, from Xavier University of Louisiana, and her
+                    master's and doctorate in mathematics from the University of
+                    Nebraska–Lincoln.
+                </p>
+
+            </div>
+
+
+            <aside class="info-card"
+                   aria-labelledby="contact-heading">
+
+                <h2 id="contact-heading">
+                    Contact
+                </h2>
+
+                <ul class="contact-list">
+
+                    <li>
+                        <span class="contact-label">
+                            Email
+                        </span>
+
+                        <a href="mailto:raegan.higgins@ttu.edu">
+                            raegan.higgins@ttu.edu
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <span class="contact-label">
+                            Phone
+                        </span>
+
+                        <a href="tel:+18067422566">
+                            806-742-2566
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <span class="contact-label">
+                            Mailing Address
+                        </span>
+
+                        Texas Tech University<br>
+                        Department of Mathematics &amp; Statistics<br>
+                        Box 41042<br>
+                        Lubbock, TX 79409-1042
+                    </li>
+
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESEARCH
+         ===================================================== -->
+
+    <section class="content-section" id="research-summary">
+
+        <div class="section-heading">
+            <h2>Research</h2>
+        </div>
+
+        <p>
+            Dr. Higgins' current research is in time scales. The calculus
+            of time scales was developed to unify and extend results
+            obtained for differential equations and difference equations.
+        </p>
+
+        <p>
+            Her research interests include oscillation criteria for certain
+            linear and nonlinear second-order dynamic equations.
+        </p>
+
+        <div class="research-box">
+
+            <h3>
+                Additional Research Interests
+            </h3>
+
+            <p>
+                Dr. Higgins is interested in applications of time scales
+                to mathematical biology as well as issues affecting
+                pre-service teachers' ability to teach mathematics.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EDUCATION
+         ===================================================== -->
+
+    <section class="content-section" id="education">
+
+        <div class="section-heading">
+            <h2>Education</h2>
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <article class="education-card">
+
+                <h3>
+                    University of Nebraska–Lincoln
+                </h3>
+
+                <p class="education-location">
+                    Lincoln, Nebraska
+                </p>
+
+                <ul>
+                    <li>
+                        Ph.D. in Mathematics, 2008
+                    </li>
+
+                    <li>
+                        M.S. in Mathematics, 2004
+                    </li>
+
+                    <li>
+                        Emphasis: Time Scales
+                    </li>
+
+                    <li>
+                        Advisors: Lynn Erbe, Ph.D. and
+                        Allan Peterson, Ph.D.
+                    </li>
+                </ul>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <h3>
+                    Xavier University of Louisiana
+                </h3>
+
+                <p class="education-location">
+                    New Orleans, Louisiana
+                </p>
+
+                <ul>
+                    <li>
+                        B.S. in Mathematics
+                    </li>
+
+                    <li>
+                        Minor: Computer Science
+                    </li>
+
+                    <li>
+                        Advisor: Vlajko Kocic, Ph.D.
+                    </li>
+                </ul>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFESSIONAL WORK
+         ===================================================== -->
+
+    <section class="content-section" id="professional">
+
+        <div class="section-heading">
+            <h2>Professional Work</h2>
+        </div>
+
+
+        <div class="link-grid">
+
+
+            <a class="feature-link"
+               href="teaching.html">
+
+                <h3>
+                    Teaching
+                </h3>
+
+                <p>
+                    Courses, graduate research advising, teaching and
+                    mentoring activities, and awards.
+                </p>
+
+            </a>
+
+
+            <a class="feature-link"
+               href="outreach.html">
+
+                <h3>
+                    Outreach &amp; Engagement
+                </h3>
+
+                <p>
+                    Professional organizations, mentoring, outreach
+                    initiatives, and engagement activities.
+                </p>
+
+            </a>
+
+
+            <a class="feature-link"
+               href="research.html">
+
+                <h3>
+                    Research &amp; Grants
+                </h3>
+
+                <p>
+                    Research interests, external funding, publications,
+                    and refereed proceedings.
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-name">
+            Raegan Higgins, Ph.D.
+        </div>
+
+        <p>
+            Department Chair and Professor
+        </p>
+
+        <p>
+            Department of Mathematics &amp; Statistics
+        </p>
+
+        <p>
+            Texas Tech University
+        </p>
+
+        <p>
+            <a href="https://www.depts.ttu.edu/math/">
+                Department of Mathematics &amp; Statistics
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

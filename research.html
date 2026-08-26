@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Research &amp; Grants | Raegan Higgins, Ph.D.</title>
+
+    <meta name="description"
+          content="Research interests, external funding, publications, and refereed proceedings for Dr. Raegan Higgins, Department Chair and Professor of Mathematics at Texas Tech University.">
+
+    <style>
+        :root {
+            --ttu-red: #cc0000;
+            --ttu-red-dark: #a30000;
+            --black: #111111;
+            --text: #252525;
+            --muted: #5b5b5b;
+            --border: #d8d8d8;
+            --white: #ffffff;
+            --focus: #000000;
+            --max-width: 1180px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--white);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--ttu-red-dark);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: var(--black);
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 4px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(1.75rem, 3vw, 2.4rem);
+            font-weight: 800;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 9999;
+            padding: 0.75rem 1rem;
+            background: var(--black);
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .site-bar {
+            background: var(--black);
+            color: var(--white);
+            border-bottom: 5px solid var(--ttu-red);
+        }
+
+        .site-bar-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            min-height: 64px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .ttu-brand,
+        .department-link {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .ttu-brand {
+            font-weight: 800;
+        }
+
+        .ttu-brand:hover,
+        .department-link:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .page-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #ffffff 68%,
+                    #f3f3f3 68%,
+                    #f3f3f3 100%
+                );
+            border-bottom: 1px solid var(--border);
+        }
+
+        .page-header-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 5rem) 0;
+        }
+
+        .page-kicker {
+            margin-bottom: 0.75rem;
+            color: var(--ttu-red);
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .title-line {
+            width: 90px;
+            height: 6px;
+            margin: 1.5rem 0;
+            background: var(--ttu-red);
+        }
+
+        .page-intro {
+            max-width: 760px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 1.08rem;
+        }
+
+        .section-nav {
+            background: var(--black);
+        }
+
+        .section-nav-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-nav a {
+            display: block;
+            padding: 1rem 1.3rem;
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .section-nav a:hover,
+        .section-nav a:focus {
+            background: var(--ttu-red);
+            color: var(--white);
+        }
+
+        main {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: clamp(3rem, 6vw, 5rem) 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 8px minmax(0, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading::before {
+            content: "";
+            background: var(--ttu-red);
+        }
+
+        .research-intro {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+            gap: 4rem;
+        }
+
+        .research-highlight {
+            padding: 2rem;
+            background: var(--black);
+            color: var(--white);
+            border-top: 6px solid var(--ttu-red);
+        }
+
+        .research-highlight h3 {
+            color: var(--white);
+        }
+
+        .grant-list {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .grant-card {
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-left: 6px solid var(--ttu-red);
+        }
+
+        .grant-card h3 {
+            margin-bottom: 0.55rem;
+        }
+
+        .grant-number {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .publication-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .publication-list li {
+            padding: 1.4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .publication-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .publication-year {
+            display: inline-block;
+            min-width: 60px;
+            color: var(--ttu-red-dark);
+            font-weight: 800;
+        }
+
+        .external-label {
+            white-space: nowrap;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-inner {
+            width: min(calc(100% - 2rem), var(--max-width));
+            margin: 0 auto;
+            padding: 2.5rem 0;
+        }
+
+        .footer-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+        }
+
+        .footer-inner p {
+            margin-bottom: 0.3rem;
+            color: #dddddd;
+            font-size: 0.9rem;
+        }
+
+        .footer-inner a {
+            color: var(--white);
+        }
+
+        @media (max-width: 760px) {
+
+            .site-bar-inner {
+                padding: 0.9rem 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .page-header {
+                background: var(--white);
+            }
+
+            .section-nav-inner {
+                display: block;
+            }
+
+            .section-nav a {
+                border-bottom: 1px solid #333333;
+            }
+
+            .research-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header>
+
+    <div class="site-bar">
+        <div class="site-bar-inner">
+
+            <a class="ttu-brand" href="https://www.ttu.edu/">
+                TEXAS TECH UNIVERSITY
+            </a>
+
+            <a class="department-link"
+               href="https://www.depts.ttu.edu/math/">
+                Department of Mathematics &amp; Statistics
+            </a>
+
+        </div>
+    </div>
+
+
+    <section class="page-header" aria-labelledby="page-title">
+
+        <div class="page-header-inner">
+
+            <div class="page-kicker">
+                Raegan Higgins, Ph.D.
+            </div>
+
+            <h1 id="page-title">
+                Research &amp; Grants
+            </h1>
+
+            <div class="title-line" aria-hidden="true"></div>
+
+            <p class="page-intro">
+                Research in time scales, dynamic equations, mathematical
+                biology, mathematics education, and externally funded STEM
+                initiatives.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <nav class="section-nav" aria-label="Raegan Higgins website">
+
+        <div class="section-nav-inner">
+
+            <a href="index.html">Home</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="outreach.html">Outreach &amp; Engagement</a>
+
+            <a href="research.html" aria-current="page">
+                Research &amp; Grants
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main id="main-content">
+
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>Research Interests</h2>
+        </div>
+
+        <div class="research-intro">
+
+            <div>
+
+                <p>
+                    My research is in the area of time scales. The calculus
+                    of time scales was developed to unify and extend results
+                    obtained for differential equations and difference equations.
+                </p>
+
+                <p>
+                    Currently, my focus is on oscillation criteria for certain
+                    linear and nonlinear second-order dynamic equations.
+                </p>
+
+                <p>
+                    I am also interested in applications of time scales to
+                    mathematical biology and issues that affect pre-service
+                    teachers' ability to teach mathematics.
+                </p>
+
+            </div>
+
+
+            <aside class="research-highlight"
+                   aria-labelledby="focus-heading">
+
+                <h3 id="focus-heading">Areas of Focus</h3>
+
+                <p>
+                    Time scale calculus, dynamic equations, oscillation
+                    theory, mathematical biology, and mathematics education.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>External Funding</h2>
+        </div>
+
+        <div class="grant-list">
+
+            <article class="grant-card">
+                <h3>
+                    Pre-Alliance Planning: The Bridges Across Texas
+                    Louis Stokes Alliance for Minority Participation
+                </h3>
+                <span class="grant-number">NSF Award No. 1701664</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1701664&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+
+            <article class="grant-card">
+                <h3>South Plains Mathematics Fellows</h3>
+                <span class="grant-number">NSF Award No. 1356604</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1356604&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+
+            <article class="grant-card">
+                <h3>West Texas Middle School Math Partnership</h3>
+                <span class="grant-number">NSF Award No. 0831420</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=0831420&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+
+            <article class="grant-card">
+                <h3>
+                    Leveraging Learning Assistantships, Mentoring, and
+                    Scholarships to Develop Self-Determined Mathematics
+                    Teachers for West Texas
+                </h3>
+                <span class="grant-number">NSF Award No. 1852944</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1852944&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+
+            <article class="grant-card">
+                <h3>
+                    Louis Stokes New STEM Pathways Implementation-Only
+                    Alliance: The Bridges Across Texas Louis Stokes
+                    Alliances for Minority Participation
+                </h3>
+                <span class="grant-number">NSF Award No. 2110048</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2110048&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+
+            <article class="grant-card">
+                <h3>
+                    Investigating Pre-College Predictors and Post-Secondary
+                    Effects of Course-Based Undergraduate Research Experiences
+                    in Texas
+                </h3>
+                <span class="grant-number">NSF Award No. 2201863</span>
+                <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2201863&amp;HistoricalAwards=false">
+                    View NSF award
+                    <span class="external-label">(external)</span>
+                </a>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>Publications</h2>
+        </div>
+
+        <ul class="publication-list">
+
+            <li>
+                <span class="publication-year">2022</span>
+                Higgins, R.
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-82658-1_20">
+                    The Road Less Traveled: My Journey to Mathematics
+                    <span class="external-label">(external)</span>
+                </a>.
+                In <em>Fifty Years of Women in Mathematics</em>.
+            </li>
+
+            <li>
+                <span class="publication-year">2022</span>
+                Higgins, R., &amp; Berger, H.
+                <a href="https://www.ams.org/notices/202202/rnoti-p180.pdf">
+                    The N<sub>0</sub> Story: Discrete Fractional Calculus
+                    <span class="external-label">(PDF, external)</span>
+                </a>.
+                <em>Notices of the American Mathematical Society</em>,
+                69(2), 180–189.
+            </li>
+
+            <li>
+                <span class="publication-year">2021</span>
+                Smith, D. J., Spott, J. L., Higgins, R., &amp; McNaughtan, J.
+                <a href="https://www.tandfonline.com/doi/full/10.1080/10668926.2021.1961923#abstract">
+                    Beyond articulation agreements: Fostering success for
+                    community college transfer students in STEM
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2021</span>
+                Öztürk, O., Higgins, R., &amp; Kittou, G.
+                <a href="https://www.pmf.ni.ac.rs/filomat-content/2021/35-6/35-6-10-13752.pdf">
+                    Oscillation of Three-Dimensional Time Scale Systems
+                    with Fixed Point Theorems
+                    <span class="external-label">(PDF, external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2020</span>
+                Higgins, R., Mills, C. J., &amp; Peace, A.
+                <a href="https://link.springer.com/article/10.1007/s11538-020-00821-z">
+                    A time scales approach for modeling intermittent
+                    hormone therapy for prostate cancer
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2018</span>
+                Öztürk, O., &amp; Higgins, R.
+                <a href="https://journals.tubitak.gov.tr/math/vol42/iss5/27/">
+                    Limit behaviors of nonoscillatory solutions of
+                    three-dimensional time scale systems
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2018</span>
+                Aguirre-Muñoz, Z., Stevens, T., Harris, G., &amp; Higgins, R.
+                <a href="https://www.researchgate.net/publication/329424994_Mathematics_Teacher_Learning_Preferences_Self-Determination_Theory_Implications_for_Addressing_Their_Learning_Needs">
+                    Mathematics Teacher Learning Preferences
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2016</span>
+                Higgins, R.
+                <a href="https://link.springer.com/chapter/10.1007/978-3-319-34139-2_16">
+                    Asymptotic and oscillatory behavior of dynamic
+                    equations on time scales
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2015</span>
+                Higgins, R. J., Kent, C. M., Kocic, V. L., &amp; Kostrov, Y.
+                <a href="https://www.jstor.org/stable/applianadiscmath.9.2.245">
+                    Dynamics of a nonlinear discrete population model with jumps
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2015</span>
+                Higgins, R.
+                <a href="https://www.dynamicpublishers.com/CAA/CAA2015/09-CAA-113-128.pdf">
+                    Oscillation of certain dynamic equations on time scales
+                    <span class="external-label">(PDF, external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2014</span>
+                Adivar, M., Akin, E., &amp; Higgins, R.
+                <a href="https://link.springer.com/article/10.1186/1029-242X-2014-95">
+                    Oscillatory behavior of solutions of third-order delay
+                    and advanced dynamic equations
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <section class="content-section">
+
+        <div class="section-heading">
+            <h2>Refereed Proceedings</h2>
+        </div>
+
+        <ul class="publication-list">
+
+            <li>
+                <span class="publication-year">2014</span>
+                Stevens, T., Harris, G., Higgins, R.,
+                Aguirre-Muñoz, Z., &amp; Liu, X.
+                <a href="https://www.rcml-math.org/assets/Proceedings/rcml%20proceedings%202014.pdf">
+                    Rigorous math courses for middle-school math teachers
+                    <span class="external-label">(PDF, external)</span>
+                </a>.
+            </li>
+
+            <li>
+                <span class="publication-year">2004</span>
+                Higgins, R., &amp; Peterson, A.
+                <a href="https://www.researchgate.net/publication/253177855_Cauchy_Functions_and_Taylor%27s_Formula_for_Time_Scales_T">
+                    Cauchy's functions and Taylor's formula for time scales T
+                    <span class="external-label">(external)</span>
+                </a>.
+            </li>
+
+        </ul>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-name">
+            Raegan Higgins, Ph.D.
+        </div>
+
+        <p>Department Chair and Professor</p>
+
+        <p>
+            Department of Mathematics &amp; Statistics
+        </p>
+
+        <p>Texas Tech University</p>
+
+        <p>
+            <a href="index.html">Raegan Higgins Home</a>
+            &nbsp;|&nbsp;
+            <a href="https://www.depts.ttu.edu/math/">
+                Department of Mathematics &amp; Statistics
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
